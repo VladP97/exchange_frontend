@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React inro</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="style.f8236d317eb676a978d0.css" rel="stylesheet"></head>
+  <body>
+    <div id="root"></div>
+    <script>
+			let secHeight = document.querySelector('#main').offsetHeight;
+			let formsHeight = document.querySelector('.ex__tabs').offsetHeight;
+			let headerHeight = document.querySelector('.header').offsetHeight;
+			let windHeight = window.innerHeight;
+			// let tradingHeight = document.querySelector('.trading__block').offsetHeight;
+			// let history = document.querySelector('.history__tabs').style.height = (windHeight - tradingHeight -headerHeight-8) +'px';
+			
+			let grid = document.querySelectorAll('.grid__table');
+			grid.forEach(element => {
+			  element.style.height = (windHeight - formsHeight -headerHeight+16)/2 +'px';
+			});
+			
+			
+			
+			
+			let items = document.querySelectorAll('.red__table tr');
+			for (let i = 0; i < items.length; i++) { 
+			
+			  items[i].onmouseover = function(event) {
+			   this.style.background = 'rgba(234, 0, 56, 0.15)';
+			   let el =this.nextElementSibling;
+				while (el) {
+				 
+				  el.style.background = 'rgba(234, 0, 56, 0.15)';
+				el = el.nextElementSibling;
+			  }
+			   
+			};
+			items[i].onmouseout = function(event) {
+			  this.style.background = '';
+			  let el =this.nextElementSibling;
+				while (el) {
+				 
+				  el.style.background = '';
+				el = el.nextElementSibling;
+			  }
+			}
+			}
+			
+			
+			
+			let items2 = document.querySelectorAll('.green__table tr');
+			for (let i = 0; i < items2.length; i++) { 
+			
+			  items2[i].onmouseover = function(event) {
+			   this.style.background = 'rgba(23, 172, 117, 0.1)';
+			   let el =this.previousElementSibling;
+				while (el) {
+				 
+				  el.style.background = 'rgba(23, 172, 117, 0.1)';
+				el = el.previousElementSibling;
+			  }
+			   
+			};
+			items2[i].onmouseout = function(event) {
+			  this.style.background = '';
+			  let el =this.previousElementSibling;
+				while (el) {
+				 
+				  el.style.background = '';
+				el = el.previousElementSibling;
+			  }
+			}
+			}
+			
+			
+			
+			</script>
+  <script type="text/javascript" src="bundle.0b8ba0846c457269261f.js"></script></body>
+</html>
